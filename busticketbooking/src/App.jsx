@@ -8,6 +8,7 @@ function App() {
     <main className="w-full flex flex-col bg-neutral-50 min-h-screen">
       {/* Navbar */}
       <Navbar />
+
       
 
       {/* Routes */}
@@ -15,9 +16,9 @@ function App() {
       <Route path="/" element={<div>Home</div>} />
 
       </Routes> */}
-
+      
       {/* Footer */}
-      footer
+      <Footer />
       </main>
     </Router>
   )
