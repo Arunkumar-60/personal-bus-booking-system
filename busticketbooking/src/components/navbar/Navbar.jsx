@@ -52,7 +52,7 @@ const Navbar = () => {
     >
       <div className='w-full h-full flex items-center justify-between'>
         {/* Logo section */}
-        <Link to='/' className='text-4xl text-blue-500 font-bold'>
+        <Link to='/' className='text-4xl text-red-500 font-bold'>
           Bus
         </Link>
 
@@ -80,7 +80,7 @@ const Navbar = () => {
               <li key={ind}>
                 <Link
                   to={item.link}
-                  className='hover:text-blue-500 focus:text-blue-500 ease-in-out duration-300'
+                  className='hover:text-red-500 focus:text-red-500 ease-in-out duration-300'
                   onClick={handleClose} // Close menu on link click
                 >
                   {item.labels}
@@ -93,8 +93,8 @@ const Navbar = () => {
           <div className='flex items-center justify-center'>
             <button
               className='md:w-fit w-full md:px-4 px-6 md:py-1 py-2.5 capitalize
-              bg-blue-500 hover:bg-transparent border border-blue-500 hover:border-blue-500 md:rounded-full rounded-xl 
-              text-base font-normal text-neutral-50 hover:text-blue-500 ease-in-out duration-300'
+              bg-red-500 hover:bg-transparent border border-red-500 hover:border-red-500 md:rounded-full rounded-xl 
+              text-base font-normal text-neutral-50 hover:text-red-500 ease-in-out duration-300'
             >
               Sign In
             </button>
