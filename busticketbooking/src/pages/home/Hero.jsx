@@ -23,7 +23,7 @@ const Hero = () => {
     >
         <RootLayout className="absolute top-0 left-0 w-full h-full py-[9ch] 
         bg-gradient-to-b from-neutral-50/30 via-neutral-50/10 to-transparent
-        flex items-center justify-start text-center flex-col gap-9">
+        flex items-center justify-start text-center flex-col gap-9 pt-10">
             {/* {title section} */}
             <div className="space-y-2">
             <motion.p

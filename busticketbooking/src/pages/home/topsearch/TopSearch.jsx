@@ -6,7 +6,7 @@ const TopSearch = () => {
   return (
     <RootLayout className="space-y-12">
         {/* tag */}
-        <div className="w-full flex items-center justify-center text-center">
+        <div className="w-full flex items-center justify-center text-center py-10">
             <h1 className="text-3xl text-neutral-800 font-bold capitalize">
                 top search <span className="text-red-500">routes</span>
             </h1>
