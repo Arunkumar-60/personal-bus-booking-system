@@ -4,7 +4,6 @@ import Footer from "./components/footer/Footer"
 import Home from "./pages/home/Home"
 import About from "./pages/about/About"
 
-const logo="Bus Ticket System";
 
 function App() {
 

@@ -8,9 +8,9 @@ const TopSearchCard = ({routeForm, routeTo, timeDuration, price}) => {
   return (
     <div className='w-full rounded-xl p-5 
     border-2 border-neutral-300 space-y-10 '>
-        <div className="space-y-3.5 w-full ">
+        <div className="space-y-3.5 w-full py-4 ">
             {/* route */}
-            <div className="space-y-0">
+            <div className="space-y-0 py-2">
                 <div className="w-full flex items-center justify-between">
                     <p className="text-xs text-neutral-400 font-normal capitalize">From</p>
                     <p className="text-xs text-neutral-400 font-normal capitalize">To</p>

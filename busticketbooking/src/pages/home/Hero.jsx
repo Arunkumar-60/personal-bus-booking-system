@@ -1,5 +1,5 @@
 import React from 'react'
-import {easeInOut, motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import RootLayout from '../../layout/RootLayout';
 import Search from './search/Search';
 
@@ -19,7 +19,7 @@ const Hero = () => {
         animate="visible"
         exit="hidden"
         variants={variants}
-        transition={{duration:0.85 , ease:easeInOut}}
+        transition={{duration:0.85 , ease:"easeInOut"}}
     >
         <RootLayout className="absolute top-0 left-0 w-full h-full py-[9ch] 
         bg-gradient-to-b from-neutral-50/30 via-neutral-50/10 to-transparent

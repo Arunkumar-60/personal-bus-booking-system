@@ -13,7 +13,7 @@ const TopSearch = () => {
         </div>
 
         {/* top search ticket route cards */}
-        <div className="w-full grid grid-cols-3 gap-5">
+        <div className="w-full grid 2xl:grid-cols-3 gap-5 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
         <TopSearchCard routeForm={"hyderabad"} routeTo={'vijayawada'} timeDuration={'10 hrs'} price={1800}/> 
         <TopSearchCard routeForm={"hyderabad"} routeTo={'warangal'} timeDuration={'3 hrs'} price={500}/> 
         <TopSearchCard routeForm={"hyderabad"} routeTo={'bangalore'} timeDuration={'12 hrs'} price={2800}/>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import { FaBars, FaTimes } from 'react-icons/fa'; // Import FaBars and FaTimes for the hamburger menu
 
-const logo="Bus Ticket System";
+const LogoText="Bus Ticket System";
 
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -55,7 +55,7 @@ const Navbar = () => {
       <div className='w-full h-full flex items-center justify-between'>
         {/* Logo section */}
         <Link to='/' className='text-4xl text-red-500 font-bold'>
-          {logo}
+          {LogoText}
         </Link>
 
         {/* Hamburger menu */}

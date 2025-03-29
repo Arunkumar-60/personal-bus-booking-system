@@ -2,9 +2,29 @@ import React from 'react'
 import RootLayout from '../../layout/RootLayout';
 import { Link } from 'react-router-dom';
 import { FaXTwitter } from "react-icons/fa6";
-
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
-const logo="Bus Ticket System";
+import MasterCardImg  from '../../assets/bus-assets/mastercard.png';
+import CreditCardImg from '../../assets/bus-assets/creditcard.png';
+import PaypalImg  from '../../assets/bus-assets/paypal.png'
+
+
+
+const LogoText="Bus Ticket System";
+
+
+const QuickLinksList=[
+  { labels: 'about us', link: '/' },
+  { labels: 'my account', link: '/' },
+  { labels: 'reserve your ticket', link: '/' },
+  { labels: 'create your account', link: '/' },
+]
+
+const SupportLinksList=[
+  { labels: 'privacy policy', link: '/' },
+  { labels: 'terms & conditions', link: '/' },
+  { labels: 'help& support center', link: '/' },
+  { labels: 'FAQs', link: '/' },
+]
 
 const TopRouteQuickLink = [
   {routeForm:"hyderabad" ,routeTo:'vijayawada' },
@@ -12,6 +32,12 @@ const TopRouteQuickLink = [
   {routeForm:"hyderabad" ,routeTo:'bangalore'},
   {routeForm:"bangalore", routeTo:'hyderabad'} ,
   {routeForm:"hyderabad", routeTo:'Goa'} ,
+]
+
+const BankCardTypeImgs= [
+  {cardType:"MasterCard",altText:"image of master card", link:MasterCardImg},
+  {cardType:"CreditCard",altText:"image of credit card", link:CreditCardImg},
+  {cardType:"Paypal",altText:"image of paypal", link:PaypalImg},
 ]
 
 const Footer = () => {
@@ -27,7 +53,7 @@ const Footer = () => {
           <div className="space-y-3">
             {/* logo */}
           <Link to="/" className='text-6xl text-red-500 font-bold p-1'>
-            {logo}
+            {LogoText}
           </Link>
 
           <p className="text-sm text-neutral-500 font-normal p-1">
@@ -76,50 +102,62 @@ const Footer = () => {
             quick links
           </h1>
           <div className="space-y-2">
-          <Link to='/' className='block text-base text-neutral-500 hover:text-neutral-300 
+          {QuickLinksList.map((item,ind)=>(
+            <Link  key={ind} to={item.link} className='block text-base 
+            text-neutral-500 hover:text-neutral-300 
             font-normal ease-in-out duration-300 capitalize'>
-              about us
+              {item.labels}
             </Link>
-
-            <Link to='/' className='block text-base text-neutral-500 hover:text-neutral-300 
-            font-normal ease-in-out duration-300 capitalize'>
-              my account
-            </Link>
-
-            <Link to='/' className='block text-base text-neutral-500 hover:text-neutral-300 
-            font-normal ease-in-out duration-300 capitalize'>
-              reserve your ticket
-            </Link>
-
-            <Link to='/' className='block text-base text-neutral-500 hover:text-neutral-300 
-            font-normal ease-in-out duration-300 capitalize'>
-              create your account
-            </Link>
-
-            
-            
+          ))}      
           </div>
         </div>
+
+
         <div className="col-span-1 space-y-5">
         <h1 className="text-lg text-neutral-100 font-semibold capitalize">
             top reserved routes
           </h1>
           <div className="space-y-2">
           {TopRouteQuickLink.map((item,ind)=>(
-            <Link to='/' className='block text-base text-neutral-500 hover:text-neutral-300 
+            <Link  key={ind} to='/' className='block text-base text-neutral-500 hover:text-neutral-300 
             font-normal ease-in-out duration-300 capitalize'>
               {item.routeForm} - {item.routeTo}
             </Link>
           ))}
           </div>
         </div>
-        <div className="col-span-1 space-y-5"></div>
+
+        <div className="col-span-1 space-y-5">
+        <h1 className="text-lg text-neutral-100 font-semibold capitalize">
+            Support links
+          </h1>
+          <div className="space-y-2 py-2">
+          {SupportLinksList.map((item,ind)=>(
+            <Link  key={ind} to={item.link} className='block text-base 
+            text-neutral-500 hover:text-neutral-300 
+            font-normal ease-in-out duration-300 capitalize'>
+              {item.labels}
+            </Link>
+          ))}
+          </div>
+        </div>
       </div>
       {/* seperator */}
 
       <div className="w-full h-px bg-neutral-800/50"></div>
       {/* copyright */}
-      <div className="w-full flex items-center justify-between"></div>
+      <div className="w-full flex items-center justify-between">
+        <div className="text-sm text-neutral-600 font-normal">
+          Copyright &copy; 2025. All rights reserved.
+        </div>
+        <div className="flex items-center gap-x-2">
+          {BankCardTypeImgs.map((item,ind)=>(
+            <div key={ind} className="">
+            <img src={item.link} alt="" className="w-fit h-9 object-contain object-center" />
+          </div>
+          ))}
+        </div>
+      </div>
     </RootLayout>
 
     </div>
