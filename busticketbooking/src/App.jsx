@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar"
 import Footer from "./components/footer/Footer"
 import Home from "./pages/home/Home"
 import About from "./pages/about/About"
+import Ticket from "./pages/ticket/Ticket"
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/about" element={<About/>} />
+      <Route path="/bus-tickets" element={<Ticket/>} />
       
 
       </Routes>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import RootLayout from "../RootLayout"
 
 
 const TopLayout = ({BgImg, title, className}) => {
@@ -11,18 +12,28 @@ const TopLayout = ({BgImg, title, className}) => {
     }
   return (
     <motion.div
-        className='w-full flex-1 h-screen 
-        bg-[url("./assets/pexels-eslames1-28310142.jpg")] 
-        bg-cover bg-no-repeat bg-top relative'
-
+        className={`w-full bg-cover bg-no-repeat bg-center relative ${className}`}
+        style={ {backgroundImage: `url(${BgImg})`}}
         initial="hidden"
         animate="visible"
         exit="hidden"
         variants={variants}
         transition={{duration:0.85 , ease: "easeInOut"}}
     >
-        TopLayout
-    
+      <RootLayout className={`absolute top-0 left-0 w-full h-full pb-10 pt-[9ch] 
+        bg-gradient-to-b from-neutral-200/90 via-neutral-500/60 to-neutral-900/70
+        flex items-center justify-end flex-col gap-3`}>
+          
+          <motion.h1
+          initial={{opacity:0,y:-800}}
+          animate={{opacity:1,y:0}}
+          exit={{opacity:0,y:-800}}
+          transition={{duration:2, ease:"easeOut"}}
+          className='text-neutral-800 text-5xl font-bold capitalize'>
+            {title}
+          </motion.h1>
+
+      </RootLayout>
     </motion.div>
   )
 }
