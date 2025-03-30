@@ -1,14 +1,23 @@
 import React from 'react'
 import TopLayout from '../../layout/toppage/TopLayout'
+import ReserveTicketImg from '../../assets/bus-assets/reserveseat.jpg'
 
 const Ticket = () => {
+  const TopLayoutMappingData = [
+    {image_url:ReserveTicketImg,title_text:"reserve your ticket"}
+  ]
+
   return (
     <div className='w-full space-y-12 pb-16'>
-        {/* top Layout */}
-        <TopLayout BgImg={'https://cdn.pixabay.com/photo/2020/09/21/11/41/bus-5589826_1280.jgp'}
-        title={'reserve your ticket'}
-        />
-    </div>
+      {/* top layout */}
+      
+      
+      {TopLayoutMappingData.map((item,ind)=>(
+        <TopLayout key={ind}
+        bgImg={item.image_url}
+        title={item.title_text}/>
+      ))}
+      </div>
   )
 }
 
