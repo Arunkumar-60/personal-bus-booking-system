@@ -34,6 +34,8 @@ const TopLayout = ({bgImg, title, className}) => {
         </motion.h1>
          
       </RootLayout>
+
+      
     </motion.div>
   )
 }
