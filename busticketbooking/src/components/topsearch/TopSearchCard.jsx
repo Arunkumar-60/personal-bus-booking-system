@@ -4,7 +4,7 @@ import { IoTvSharp } from 'react-icons/io5'
 
 import { GiCharging, GiWaterBottle } from 'react-icons/gi'
 
-const TopSearchCard = ({routeForm, routeTo, timeDuration, price}) => {
+const TopSearchCard = ({routeFrom, routeTo, timeDuration, price}) => {
   return (
     <div className='w-full rounded-xl p-5 
     border-2 border-neutral-300 space-y-10 '>
@@ -18,7 +18,7 @@ const TopSearchCard = ({routeForm, routeTo, timeDuration, price}) => {
 
                 <div className="w-full flex items-center justify-between gap-x-3">
                     {/* from */}
-                    <h1 className='text-xl text-neutral-600 font-semibold capitalize'>{routeForm}</h1>
+                    <h1 className='text-xl text-neutral-600 font-semibold capitalize'>{routeFrom}</h1>
                     {/* time duration */}
                     <div className="flex-1 border-dashed border border-neutral-400 relative">
                         <p className="absolute w-fit px-3 h-6 

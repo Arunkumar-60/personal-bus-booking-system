@@ -5,6 +5,7 @@ import RootLayout from '../../layout/RootLayout'
 import { motion } from 'framer-motion'
 import Search from '../home/search/Search'
 import Filter from './filter/Filter'
+import SearchResult from './searchresults/SearchResult'
 
 const Ticket = () => {
   const TopLayoutMappingData = [
@@ -56,7 +57,7 @@ const Ticket = () => {
             </div>
 
             {/* search tickets  */}
-            search-tickets
+            <SearchResult/>
 
         </div>
 

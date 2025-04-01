@@ -27,11 +27,11 @@ const SupportLinksList=[
 ]
 
 const TopRouteQuickLink = [
-  {routeForm:"hyderabad" ,routeTo:'vijayawada' },
-  {routeForm:"hyderabad", routeTo:'warangal'} ,
-  {routeForm:"hyderabad" ,routeTo:'bangalore'},
-  {routeForm:"bangalore", routeTo:'hyderabad'} ,
-  {routeForm:"hyderabad", routeTo:'Goa'} ,
+  {routeFrom:"hyderabad" ,routeTo:'vijayawada' },
+  {routeFrom:"hyderabad", routeTo:'warangal'} ,
+  {routeFrom:"hyderabad" ,routeTo:'bangalore'},
+  {routeFrom:"bangalore", routeTo:'hyderabad'} ,
+  {routeFrom:"hyderabad", routeTo:'Goa'} ,
 ]
 
 const BankCardTypeImgs= [
@@ -121,7 +121,7 @@ const Footer = () => {
           {TopRouteQuickLink.map((item,ind)=>(
             <Link  key={ind} to='/' className='block text-base text-neutral-500 hover:text-neutral-300 
             font-normal ease-in-out duration-300 capitalize'>
-              {item.routeForm} - {item.routeTo}
+              {item.routeFrom} - {item.routeTo}
             </Link>
           ))}
           </div>
